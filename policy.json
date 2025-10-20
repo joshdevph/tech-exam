@@ -1,0 +1,10 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [{
+    "Effect": "Allow",
+    "Action": ["ecr:*", "ecs:*", "ec2:*", "rds:*", "elasticloadbalancing:*",
+               "secretsmanager:*", "logs:*", "iam:*", "cloudwatch:*",
+               "application-autoscaling:*"],
+    "Resource": "*"
+  }]
+}
