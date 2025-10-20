@@ -1,0 +1,30 @@
+# General Configuration
+project_name = "fastapi-app"
+environment  = "production"
+aws_region   = "us-east-1"
+
+# VPC Configuration
+vpc_cidr = "10.0.0.0/16"
+
+# Database Configuration
+# IMPORTANT: Change these values before deploying!
+db_username        = "dbadmin"
+db_password        = "ChangeThisPassword123!"  # Use a strong password
+db_instance_class  = "db.t3.micro"  # For production, consider db.t3.small or larger
+db_allocated_storage = 20
+
+# ECS Configuration
+# Replace with your actual ECR image URI after building and pushing
+container_image  = "123456789012.dkr.ecr.us-east-1.amazonaws.com/fastapi-app:latest"
+container_port   = 8000
+desired_count    = 2
+min_capacity     = 2
+max_capacity     = 6
+
+# Task Resources
+ecs_task_cpu    = "512"   # 0.5 vCPU
+ecs_task_memory = "1024"  # 1 GB
+
+# Auto-Scaling Configuration
+target_cpu_utilization    = 70
+target_memory_utilization = 80
